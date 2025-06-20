@@ -5,7 +5,6 @@ import { Search } from 'lucide-react';
 import {
   FileIcon,
   ImageIcon,
-  VideoIcon,
   FileTextIcon,
   Download,
   Trash2,
@@ -15,7 +14,6 @@ import {
 export default function CertificateList({ user }) {
   const [files, setFiles] = useState([]);
   const [search, setSearch] = useState('');
-  const [openMenu, setOpenMenu] = useState(null);
   const [previewing, setPreviewing] = useState(null); // 👈 for toggling PDF preview
 
   /* 🔄 fetch certificate list */
