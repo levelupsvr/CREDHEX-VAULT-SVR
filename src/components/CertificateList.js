@@ -69,7 +69,6 @@ export default function CertificateList({ user }) {
 
     if (error) alert(`Failed: ${error.message}`);
     else setFiles((prev) => prev.filter((f) => f.name !== name));
-    setOpenMenu(null);
     setPreviewing(null);
   };
 
