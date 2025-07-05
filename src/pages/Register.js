@@ -23,14 +23,14 @@ function Register() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       <div className="flex items-center justify-center min-h-screen p-3 sm:p-4">
-        <div className="w-full max-w-sm sm:max-w-md">
-          <div className="text-center mb-6 sm:mb-8 animate-fade-in-down px-2">
-            <h1 className="text-2xl sm:text-3xl font-bold text-amber-800 mb-2 drop-shadow-md transition-all duration-500">
+        <div className="w-full max-w-md sm:max-w-md">
+          <div className="text-center mb-8 sm:mb-8 animate-fade-in-down px-2">
+            <h1 className="text-3xl sm:text-3xl font-bold text-amber-800 mb-2 drop-shadow-md transition-all duration-500">
               CredHex Vault
             </h1>
-            <p className="text-sm sm:text-base text-amber-600">Sign up to access secure file storage</p>
+            <p className="text-base sm:text-base text-amber-600">Sign up to access secure file storage</p>
           </div>
-          <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md animate-fade-in-up transition-all duration-700">
+          <div className="bg-white p-6 sm:p-6 rounded-lg shadow-md animate-fade-in-up transition-all duration-700">
             <form
               onSubmit={async (e) => {
                 e.preventDefault();
@@ -40,7 +40,7 @@ function Register() {
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full p-3 text-sm sm:text-base border border-gray-300 rounded mb-3 sm:mb-4 focus:border-amber-400 focus:ring-2 focus:ring-amber-200 transition-all duration-300"
+                className="w-full p-4 text-base sm:text-base border border-gray-300 rounded mb-4 sm:mb-4 focus:border-amber-400 focus:ring-2 focus:ring-amber-200 transition-all duration-300"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
                 required
@@ -49,7 +49,7 @@ function Register() {
               <input
                 type="password"
                 placeholder="Create Password"
-                className="w-full p-3 text-sm sm:text-base border border-gray-300 rounded mb-3 sm:mb-4 focus:border-amber-400 focus:ring-2 focus:ring-amber-200 transition-all duration-300"
+                className="w-full p-4 text-base sm:text-base border border-gray-300 rounded mb-4 sm:mb-4 focus:border-amber-400 focus:ring-2 focus:ring-amber-200 transition-all duration-300"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
                 required
@@ -58,7 +58,7 @@ function Register() {
                 type="submit"
                 disabled={loading}
                 className={`
-                  w-full bg-[#d97706] text-white py-3 rounded text-sm sm:text-base
+                  w-full bg-[#d97706] text-white py-4 rounded text-base sm:text-base
                   hover:bg-[#b45309] transition-all duration-200
                   shadow-md hover:scale-105 active:scale-95
                   ${loading ? 'opacity-60 cursor-not-allowed' : ''}
@@ -66,7 +66,7 @@ function Register() {
               >
                 {loading ? (
                   <span className="flex items-center justify-center">
-                    <svg className="animate-spin h-4 w-4 sm:h-5 sm:w-5 mr-2 text-white" viewBox="0 0 24 24">
+                    <svg className="animate-spin h-5 w-5 sm:h-5 sm:w-5 mr-2 text-white" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"/>
                     </svg>
@@ -79,7 +79,7 @@ function Register() {
             </form>
             <p
               onClick={() => navigate('/login')}
-              className="mt-3 sm:mt-4 text-center text-xs sm:text-sm text-gray-600 hover:underline cursor-pointer transition-colors duration-200 hover:text-amber-700"
+              className="mt-4 sm:mt-4 text-center text-sm sm:text-sm text-gray-600 hover:underline cursor-pointer transition-colors duration-200 hover:text-amber-700"
             >
               Already have an account? Log in
             </p>
